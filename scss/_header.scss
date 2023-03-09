@@ -1,0 +1,20 @@
+header{
+    grid-area: header;
+    padding: 0.5em;
+    .navbar .container-fluid{
+        display: flex;
+        justify-content: flex-start;
+        align-items: stretch;
+        background: linear-gradient(0deg, rgba(0,0,0,1) 0%, rgba(255,132,0,1) 100%);
+        padding: 0.5em;
+        
+            }
+        }
+        .nav{
+            background: linear-gradient(90deg, rgba(0,0,0,1) 9%, rgba(255,132,0,1) 85%);
+            .nav-link{
+                color: rgb(255, 255, 255);
+                list-style-type:circle;
+                list-style-position: inside;
+                    }
+                }
