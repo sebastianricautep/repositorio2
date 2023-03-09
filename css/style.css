@@ -33,7 +33,7 @@ footer{
     
 
 }
-.container-fluid{
+.navbar .container-fluid{
     display: flex;
     justify-content: flex-start;
     align-items: stretch;
@@ -42,7 +42,7 @@ footer{
     
     
 }
-.nav {
+.nav .nav-link{
     background: linear-gradient(90deg, rgba(0,0,0,1) 9%, rgba(255,132,0,1) 85%);
 
 }
@@ -120,6 +120,9 @@ main{
         "footer footer ";
     }
     
+
+}
+@media (min-width: 600px){
 
 }
 @media (min-width: 900px){
