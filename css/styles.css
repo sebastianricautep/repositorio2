@@ -12,10 +12,13 @@ body {
 body h1, body h2, body h3, body h4, body h5 {
   text-align: center;
   padding: 0.5em;
+}
+body p {
+  font-size: 20px;
   transition: font-size 1s;
 }
-body h1:hover, body h2:hover, body h3:hover, body h4:hover, body h5:hover {
-  font-size: 45px;
+body p:hover {
+  font-size: 25px;
 }
 
 .figuras {

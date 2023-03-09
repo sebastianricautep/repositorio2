@@ -13,17 +13,13 @@ body{
         
         }
         p{
-            font-size: 3em;
+            font-size: 20px;
             transition: font-size 1s;
-            
         &:hover{
-            font-size: 4em;
+            font-size: 25px;
         }
         }
-        transition: font-size 1s;
-        &:hover{
-            font-size: 45px;
-        }
+        
     }
 .figuras{
     display: flex;
