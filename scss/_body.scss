@@ -10,16 +10,19 @@ body{
     h1, h2, h3, h4, h5{
         text-align: center;
         padding: 0.5em;
-        
         }
         p{
-            font-size: 20px;
-            transition: font-size 1s;
-        &:hover{
-            font-size: 25px;
+            color: black;
+            font-size: 18px;
+            padding: 2px;
+            margin: 2px;
+            &:hover{
+                transition: 1s;
+                color: rgb(109, 0, 0);
+                font-size: 22px;
+            }
         }
-        }
-        
+
     }
 .figuras{
     display: flex;

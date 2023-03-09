@@ -14,11 +14,15 @@ body h1, body h2, body h3, body h4, body h5 {
   padding: 0.5em;
 }
 body p {
-  font-size: 20px;
-  transition: font-size 1s;
+  color: black;
+  font-size: 18px;
+  padding: 2px;
+  margin: 2px;
 }
 body p:hover {
-  font-size: 25px;
+  transition: 1s;
+  color: rgb(109, 0, 0);
+  font-size: 22px;
 }
 
 .figuras {
@@ -145,49 +149,49 @@ header .navbar .container-fluid {
   display: flex;
   align-items: stretch;
   flex-direction: column;
-  flex-wrap: wrap;
+  flex-wrap: nowrap;
 }
 .grillaJug .carta2 {
   grid-area: carta2;
   display: flex;
   align-items: stretch;
   flex-direction: column;
-  flex-wrap: wrap;
+  flex-wrap: nowrap;
 }
 .grillaJug .carta3 {
   grid-area: carta3;
   display: flex;
   align-items: stretch;
   flex-direction: column;
-  flex-wrap: wrap;
+  flex-wrap: nowrap;
 }
 .grillaJug .carta4 {
   grid-area: carta4;
   display: flex;
   align-items: stretch;
   flex-direction: column;
-  flex-wrap: wrap;
+  flex-wrap: nowrap;
 }
 .grillaJug .carta5 {
   grid-area: carta5;
   display: flex;
   align-items: stretch;
   flex-direction: column;
-  flex-wrap: wrap;
+  flex-wrap: nowrap;
 }
 .grillaJug .carta6 {
   grid-area: carta6;
   display: flex;
   align-items: stretch;
   flex-direction: column;
-  flex-wrap: wrap;
+  flex-wrap: nowrap;
 }
-.grillaJug .carta {
+.grillaJug .carta7 {
   grid-area: carta7;
   display: flex;
   align-items: stretch;
   flex-direction: column;
-  flex-wrap: wrap;
+  flex-wrap: nowrap;
 }
 
 @media (min-width: 600px) {

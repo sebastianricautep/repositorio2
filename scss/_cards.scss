@@ -68,31 +68,31 @@
     .grillaJug{
         .carta1 {
             grid-area: carta1;
-            @include prueba(stretch, column,wrap);
+            @include prueba(stretch, column,nowrap);
         }
         .carta2{
             grid-area: carta2;
-            @include prueba(stretch, column,wrap);
+            @include prueba(stretch, column,nowrap);
         }
         .carta3{
             grid-area:carta3 ;
-            @include prueba(stretch, column,wrap);
+            @include prueba(stretch, column,nowrap);
         }
         .carta4{
             grid-area:carta4 ;
-            @include prueba(stretch, column,wrap);
+            @include prueba(stretch, column,nowrap);
         }
         .carta5{
             grid-area:carta5 ;
-            @include prueba(stretch, column,wrap);
+            @include prueba(stretch, column,nowrap);
         }
         .carta6{
             grid-area: carta6;
-            @include prueba(stretch, column,wrap);
+            @include prueba(stretch, column,nowrap);
         }
-        .carta{
+        .carta7{
             grid-area: carta7;
-            @include prueba(stretch, column,wrap);
+            @include prueba(stretch, column,nowrap);
         }
         grid-area: grillajug;
         display: grid;
