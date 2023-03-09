@@ -15,14 +15,13 @@ body h1, body h2, body h3, body h4, body h5 {
   transition: font-size 1s;
 }
 body h1:hover, body h2:hover, body h3:hover, body h4:hover, body h5:hover {
-  font-size: 35px;
+  font-size: 45px;
 }
 
 .figuras {
   display: flex;
   align-items: center;
   flex-direction: row;
-  flood-opacity: 4%;
 }
 
 header {
