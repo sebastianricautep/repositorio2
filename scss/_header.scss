@@ -5,16 +5,22 @@ header{
         display: flex;
         justify-content: space-between;
         align-items: stretch;
-        background: linear-gradient(0deg, rgba(0,0,0,1) 0%, rgba(255,132,0,1) 100%);
+        background: rgb(219,0,0);
+        background: linear-gradient(90deg, rgba(219,0,0,1) 11%, rgba(0,16,135,1) 100%);
         padding: 0.5em;
+        a{
+            color: white;
+        }
+        
         
             }
+    }
+.nav{
+    background: rgb(219,0,0);
+    background: linear-gradient(90deg, rgba(219,0,0,1) 11%, rgba(0,16,135,1) 100%);
+    .nav-link{
+    color: rgb(255, 255, 255);
+    list-style-type:circle;
+    list-style-position: inside;
         }
-        .nav{
-            background: linear-gradient(90deg, rgba(0,0,0,1) 9%, rgba(255,132,0,1) 85%);
-            .nav-link{
-                color: rgb(255, 255, 255);
-                list-style-type:circle;
-                list-style-position: inside;
-                    }
-                }
+    }

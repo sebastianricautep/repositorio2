@@ -1,0 +1,41 @@
+.grillaStory{
+    .pcp{
+        grid-area:pcp;
+
+    }
+    .msn{
+        grid-area:msn;
+    }
+    .accordion{
+        grid-area:acordeon;
+    }
+    display: grid;
+    grid-template-areas:
+    "header"
+    "main"
+    "pcp"
+    "msn"
+    "acordeon"
+    "footer";
+
+}
+@media (min-width: 600px){
+    .grillaStory{
+        grid-template-areas:
+        "header main"
+        "pcp msn"
+        "acordeon acordeon"
+        "footer footer";
+    
+    }
+}
+@media (min-width: 900px){
+    .grillaStory{
+        grid-template-areas:
+        "header header header"
+        "pcp main msn"
+        "acordeon acordeon acordeon"
+        "foooter footer footer ";
+    
+    }
+}

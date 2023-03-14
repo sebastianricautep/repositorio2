@@ -7,7 +7,6 @@
 body {
   background-color: whitesmoke;
   margin: 2em;
-  gap: 1em;
 }
 body h1, body h2, body h3, body h4, body h5 {
   text-align: center;
@@ -40,12 +39,17 @@ header .navbar .container-fluid {
   display: flex;
   justify-content: space-between;
   align-items: stretch;
-  background: linear-gradient(0deg, rgb(0, 0, 0) 0%, rgb(255, 132, 0) 100%);
+  background: rgb(219, 0, 0);
+  background: linear-gradient(90deg, rgb(219, 0, 0) 11%, rgb(0, 16, 135) 100%);
   padding: 0.5em;
+}
+header .navbar .container-fluid a {
+  color: white;
 }
 
 .nav {
-  background: linear-gradient(90deg, rgb(0, 0, 0) 9%, rgb(255, 132, 0) 85%);
+  background: rgb(219, 0, 0);
+  background: linear-gradient(90deg, rgb(219, 0, 0) 11%, rgb(0, 16, 135) 100%);
 }
 .nav .nav-link {
   color: rgb(255, 255, 255);
@@ -54,10 +58,11 @@ header .navbar .container-fluid {
 }
 
 .grilla1 {
+  gap: 1em;
   display: grid;
-  grid-template-areas: "header" "main" "estadio" "hinchada" "menu2" "contenido" "footer";
+  grid-template-areas: "header" "main" "estadio" "menu2" "contenido" "footer";
   padding: 1em;
-  border: #e47c05 solid;
+  border: #000000 solid;
 }
 .grilla1 main {
   grid-area: main;
@@ -67,11 +72,15 @@ header .navbar .container-fluid {
   padding: 0.5em;
   margin: 0.5em;
   grid-area: estadio;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  align-content: center;
 }
-.grilla1 .hinchada {
-  padding: 0.5em;
-  margin: 0.5em;
-  grid-area: hinchada;
+.grilla1 .estadio img {
+  margin-bottom: 20px;
+  margin-top: 20px;
 }
 .grilla1 .menu2 {
   grid-area: menu2;
@@ -83,19 +92,66 @@ header .navbar .container-fluid {
   justify-content: center;
   align-items: first baseline;
   grid-area: contenido;
-  padding: 0.5em;
+  padding: 1em;
 }
 
 @media (min-width: 600px) {
   .grilla1 {
-    grid-template-areas: "header main " "menu2 menu2" "estadio hinchada" "contenido contenido  " "footer footer ";
+    grid-template-areas: "header main " "menu2 menu2" "estadio estadio" "contenido contenido  " "footer footer ";
+  }
+  .grilla1 .estadio {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    align-content: center;
+  }
+  .grilla1 .estadio img {
+    width: 150px;
+    margin-left: 20px;
+    margin-right: 20px;
   }
 }
 @media (min-width: 900px) {
   .grilla1 {
-    grid-template-areas: "header header main" "menu2  contenido contenido" "estadio contenido contenido " "hinchada contenido contenido" "footer footer footer";
-    grid-template-columns: auto auto 500px;
-    grid-template-rows: 100px 200px 200px auto;
+    grid-template-areas: "header header main" "menu2  contenido contenido" "estadio contenido contenido " "footer footer footer";
+    grid-template-columns: 300px auto 500px;
+    grid-template-rows: 100px 200px auto;
+  }
+  .grilla1 .estadio {
+    flex-direction: column-reverse;
+    align-items: center;
+    justify-content: center;
+    align-content: center;
+  }
+  .grilla1 .estadio img {
+    width: 150px;
+    margin-left: 20px;
+    margin-right: 20px;
+  }
+}
+.grillaStory {
+  display: grid;
+  grid-template-areas: "header" "main" "pcp" "msn" "acordeon" "footer";
+}
+.grillaStory .pcp {
+  grid-area: pcp;
+}
+.grillaStory .msn {
+  grid-area: msn;
+}
+.grillaStory .accordion {
+  grid-area: acordeon;
+}
+
+@media (min-width: 600px) {
+  .grillaStory {
+    grid-template-areas: "header main" "pcp msn" "acordeon acordeon" "footer footer";
+  }
+}
+@media (min-width: 900px) {
+  .grillaStory {
+    grid-template-areas: "header header header" "pcp main msn" "acordeon acordeon acordeon" "foooter footer footer ";
   }
 }
 .grilla2 {

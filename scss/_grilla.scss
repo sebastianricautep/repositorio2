@@ -8,12 +8,17 @@
         padding: 0.5em;
         margin: 0.5em;
         grid-area: estadio;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        align-content: center;
+        img{
+            margin-bottom: 20px;
+            margin-top: 20px;
+        }
     }
-    .hinchada{
-        padding: 0.5em;
-        margin: 0.5em;
-        grid-area: hinchada;
-    }
+
     .menu2{
         grid-area: menu2;
         padding: 0.5em;
@@ -24,32 +29,45 @@
         justify-content: center;
         align-items: first baseline;
         grid-area: contenido;
-        padding: 0.5em;
+        padding: 1em;
     }
-    
+    gap: 1em;
     display: grid;
     grid-template-areas: 
     "header"
     "main"
     "estadio"
-    "hinchada"
     "menu2"
     "contenido"
     "footer";
     padding: 1em;
-    border:#e47c05 solid ;
+    border:#000000 solid ;
     
     
 }
 @media (min-width: 600px){
+    
     .grilla1{
         grid-template-areas: 
         "header main "
         "menu2 menu2"
-        "estadio hinchada"
+        "estadio estadio"
         "contenido contenido  "
         "footer footer ";
+        .estadio{
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: center;
+            align-content: center;
+            img{
+                width: 150px;
+                margin-left: 20px;
+                margin-right: 20px;
+            }
+        }
     }
+    
     
 
 }
@@ -59,11 +77,20 @@
         "header header main"
         "menu2  contenido contenido"
         "estadio contenido contenido "
-        "hinchada contenido contenido"
         "footer footer footer";
-        grid-template-columns: auto auto 500px;
-        grid-template-rows: 100px 200px 200px auto;
-    
+        grid-template-columns: 300px auto 500px;
+        grid-template-rows: 100px 200px  auto;
+        .estadio{
+            flex-direction: column-reverse;
+            align-items: center;
+            justify-content: center;
+            align-content: center;
+            img{
+                width: 150px;
+                margin-left: 20px;
+                margin-right: 20px;
+            }
+        }
 }
 
 }
