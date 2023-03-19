@@ -81,12 +81,12 @@
         grid-template-columns: 300px auto 500px;
         grid-template-rows: 100px 200px  auto;
         .estadio{
+            display: flex;
             flex-direction: column-reverse;
             align-items: center;
-            justify-content: center;
-            align-content: center;
+            justify-content: space-evenly;
             img{
-                width: 150px;
+                width: 350px;
                 margin-left: 20px;
                 margin-right: 20px;
             }

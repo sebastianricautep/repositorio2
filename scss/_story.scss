@@ -8,16 +8,18 @@
     }
     .accordion{
         grid-area:acordeon;
-    }
+        
+        }
+    
     display: grid;
     grid-template-areas:
     "header"
-    "main"
     "pcp"
+    "main"
     "msn"
     "acordeon"
     "footer";
-
+    
 }
 @media (min-width: 600px){
     .grillaStory{
@@ -35,7 +37,46 @@
         "header header header"
         "pcp main msn"
         "acordeon acordeon acordeon"
-        "foooter footer footer ";
+        "footer footer footer ";
     
     }
+}
+.accordion-body1{
+    .textAcordeon1{
+        grid-area: texto1;
+    }
+    .textAcordeon2{
+        grid-area:texto2;
+    }
+    .imgAcordeon1{
+        grid-area:img1;
+        width: 115px;
+    }
+    .imgAcordeon2{
+        grid-area: img2;
+        width: 115px;
+    }
+    display: grid;
+    grid-template-areas: 
+    "img1"
+    "texto1"
+    "img2"
+    "texto2";
+
+}
+@media (min-width:600px){
+    .accordion-body1{
+        grid-template-areas: 
+        "img1 texto1"
+        "img2 texto2"
+        ;
+}
+}
+@media (min-width: 900px){
+    .accordion-body1{
+        grid-template-areas: 
+        "img1 img2"
+        "texto1 texto2"
+        ;
+}
 }
