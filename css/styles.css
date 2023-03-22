@@ -57,6 +57,99 @@ header .navbar .container-fluid a {
   list-style-position: inside;
 }
 
+.grillaStory {
+  display: grid;
+  grid-template-areas: "header" "pcp" "main" "msn" "acordeon" "footer";
+}
+.grillaStory .pcp {
+  grid-area: pcp;
+}
+.grillaStory .msn {
+  grid-area: msn;
+}
+.grillaStory .accordion {
+  grid-area: acordeon;
+}
+
+@media (min-width: 600px) {
+  .grillaStory {
+    grid-template-areas: "header main" "pcp msn" "acordeon acordeon" "footer footer";
+  }
+}
+@media (min-width: 900px) {
+  .grillaStory {
+    grid-template-areas: "header header header" "pcp main msn" "acordeon acordeon acordeon" "footer footer footer ";
+  }
+}
+.gridAc1 {
+  display: grid;
+  grid-template-areas: "img1" "texto1" "img2" "texto2";
+}
+.gridAc1 .textAcordeon1 {
+  grid-area: texto1;
+}
+.gridAc1 .textAcordeon2 {
+  grid-area: texto2;
+}
+.gridAc1 .imgAcordeon1 {
+  grid-area: img1;
+}
+.gridAc1 .imgAcordeon1 img {
+  width: 115px;
+}
+.gridAc1 .imgAcordeon2 {
+  grid-area: img2;
+}
+.gridAc1 .imgAcordeon2 img {
+  width: 115px;
+}
+
+@media (min-width: 600px) {
+  .gridAc1 {
+    grid-template-areas: "img1 texto1" "img2 texto2";
+  }
+}
+@media (min-width: 900px) {
+  .gridAc1 {
+    grid-template-areas: "img1 img2" "texto1 texto2";
+  }
+}
+.gridAc2 {
+  display: grid;
+  grid-template-areas: "titulo1" "img3" "texto3" "titulo2" "img4";
+}
+.gridAc2 .textAcordeon3 {
+  grid-area: texto3;
+}
+.gridAc2 .tituloAcordeon1 {
+  grid-area: titulo1;
+}
+.gridAc2 .imgAcordeon3 {
+  grid-area: img3;
+}
+.gridAc2 .imgAcordeon3 img {
+  width: 115px;
+}
+.gridAc2 .imgAcordeon4 {
+  grid-area: img4;
+}
+.gridAc2 .imgAcordeon4 img {
+  width: 115px;
+}
+.gridAc2 .tituloAcordeon2 {
+  grid-area: titulo2;
+}
+
+@media (min-width: 600px) {
+  .gridAc2 {
+    grid-template-areas: "titulo1 img3" "texto3 texto3" "titulo2 img4";
+  }
+}
+@media (min-width: 900px) {
+  .gridAc2 {
+    grid-template-areas: "texto3 texto3" "titulo1 titulo2" "img3 img4";
+  }
+}
 .grilla1 {
   gap: 1em;
   display: grid;
@@ -128,59 +221,6 @@ header .navbar .container-fluid a {
     width: 350px;
     margin-left: 20px;
     margin-right: 20px;
-  }
-}
-.grillaStory {
-  display: grid;
-  grid-template-areas: "header" "pcp" "main" "msn" "acordeon" "footer";
-}
-.grillaStory .pcp {
-  grid-area: pcp;
-}
-.grillaStory .msn {
-  grid-area: msn;
-}
-.grillaStory .accordion {
-  grid-area: acordeon;
-}
-
-@media (min-width: 600px) {
-  .grillaStory {
-    grid-template-areas: "header main" "pcp msn" "acordeon acordeon" "footer footer";
-  }
-}
-@media (min-width: 900px) {
-  .grillaStory {
-    grid-template-areas: "header header header" "pcp main msn" "acordeon acordeon acordeon" "footer footer footer ";
-  }
-}
-.accordion-body1 {
-  display: grid;
-  grid-template-areas: "img1" "texto1" "img2" "texto2";
-}
-.accordion-body1 .textAcordeon1 {
-  grid-area: texto1;
-}
-.accordion-body1 .textAcordeon2 {
-  grid-area: texto2;
-}
-.accordion-body1 .imgAcordeon1 {
-  grid-area: img1;
-  width: 115px;
-}
-.accordion-body1 .imgAcordeon2 {
-  grid-area: img2;
-  width: 115px;
-}
-
-@media (min-width: 600px) {
-  .accordion-body1 {
-    grid-template-areas: "img1 texto1" "img2 texto2";
-  }
-}
-@media (min-width: 900px) {
-  .accordion-body1 {
-    grid-template-areas: "img1 img2" "texto1 texto2";
   }
 }
 .grilla2 {
