@@ -1,0 +1,45 @@
+.grid-contact{
+    .email{
+        grid-area: email;
+        @include grid(2px, 3px, 2px);
+    }
+    .comentario{
+        grid-area: comentario;
+        @include grid(2px, 3px, 2px);
+    }
+    .informacion-si{
+        grid-area: si;
+        @include grid(2px, 3px, 2px);
+    }
+    .informacion-no{
+        grid-area: no;
+        @include grid(2px, 3px, 2px);
+    }
+    .enviar{
+        grid-area: enviar;
+        @include grid(2px, 3px, 2px);
+    }
+    display: grid;
+    grid-template-rows: auto;
+    grid-template-areas: 
+    "header"
+    "main"
+    "email"
+    "si"
+    "no"
+    "comentario"
+    "enviar"
+    "footer";
+}
+@media (min-width: 600px){
+    .grid-contact{
+        grid-template-areas: 
+        "header main"
+        "email comentario"
+        "si si"
+        "no no "
+        "enviar enviar"
+        "footer footer";
+    }
+    
+}

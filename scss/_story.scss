@@ -1,0 +1,213 @@
+.grillaStory{
+    .pcp{
+        grid-area:pcp;
+        @include grid(none, 3px, none );
+
+    }
+    .msn{
+        grid-area:msn;
+        @include grid(none, 3px, none );
+    }
+    .accordion{
+        grid-area:acordeon;
+        @include grid(none, 3px, none );
+        
+        }
+    
+    display: grid;
+    grid-template-areas:
+    "header"
+    "pcp"
+    "main"
+    "msn"
+    "acordeon"
+    "footer";
+    @include grid(20px, 2px, 15px );
+
+    .gridAc1{
+        .textAcordeon1{
+            grid-area:texto1;
+            @include grid(2px, 3px, 0px );
+
+        }
+        .textAcordeon2{
+            grid-area:texto2;
+            @include grid(2px, 3px, 0px );
+        }
+        .imgAcordeon1{
+            display: flex;
+            align-items: center;
+            justify-items: center;
+            flex-direction: column;
+            grid-area:img1;
+            @include grid(2px, 3px, 0px );
+        }
+        .imgAcordeon2{
+            display: flex;
+            align-items: center;
+            justify-items: center;
+            flex-direction: column;
+            grid-area:img2;
+            @include grid(2px, 3px, 0px );
+            img{
+                width: 115px;
+            }
+        }
+        @include grid(2px, 2px, 8px );
+        display: grid;
+        grid-template-areas: 
+        "img1"
+        "texto1"
+        "img2"
+        "texto2";
+    
+    }
+    @media (min-width:600px){
+        .gridAc1{
+            grid-template-columns: auto auto;
+            grid-template-areas: 
+            "img1 texto1"
+            "img2 texto2"
+            ;
+    }
+    }
+    @media (min-width: 900px){
+        
+        .gridAc1{
+            grid-template-areas: 
+            "img1 img2"
+            "texto1 texto2"
+            ;
+    }
+    }
+    .gridAc2{
+        .textAcordeon3{
+            grid-area:texto3;
+            @include grid(2px, 3px, 0px );
+        }
+        .tituloAcordeon1{
+            grid-area:titulo1;
+            @include grid(2px, 3px, 0px);
+        }
+        .imgAcordeon3{
+            display: flex;
+            align-items: center;
+            grid-area:img3;
+            @include grid(2px, 3px, 0px );
+        }
+        .imgAcordeon4{
+            grid-area:img4;
+            @include grid(2px, 3px, 0px );
+        }
+        .tituloAcordeon2{
+            grid-area: titulo2;
+            @include grid(2px, 3px, 0px );
+        }
+        @include grid(2px,2px, 8px );
+        display: grid;
+        grid-template-areas: 
+        "titulo1"
+        "img3"
+        "texto3"
+        "titulo2"
+        "img4";
+    
+    }
+    @media (min-width:600px){
+        .gridAc2{
+            grid-template-areas: 
+            "titulo1 img3"
+            "texto3 texto3"
+            "titulo2 img4"
+            ;
+    }
+    }
+    @media (min-width: 900px){
+        .gridAc2{
+            grid-template-areas: 
+            "texto3 texto3"
+            "titulo1 titulo2"
+            "img3 img4"
+            ;
+    }
+    }
+    .gridAc3{
+        .texto5Ac{
+            grid-area:texto5;
+            @include grid(2px, 3px, 0px);
+        }
+        .texto6Ac{
+            grid-area:texto6;
+            @include grid(2px, 3px, 0px );
+        }
+        .texto7Ac{
+            grid-area:texto7;
+            @include grid(2px, 3px, 0px );
+        }
+        .img5Ac{
+            grid-area:img5;
+            @include grid(2px, 3px, 0px );
+    }
+        .img6Ac{
+            grid-area:img6;
+            @include grid(2px, 3px, 0px );
+    }
+        .img7Ac{
+            @include grid(2px, 3px, 0px );
+    }
+    @include grid(2px, 2px, 8px );
+        display: grid;
+        grid-template-areas: 
+        "texto5"
+        "img5"
+        "texto6"
+        "img6"
+        "texto7"
+        "img7";
+    
+    }
+
+    @media (min-width:600px){
+        .gridAc3{
+            grid-template-areas: 
+            "texto5 texto6"
+            "img5 img6"
+            "img7 texto7"
+            
+            ;
+            
+    }
+    
+    }
+    @media (min-width: 900px){
+        .gridAc3{
+            grid-template-areas: 
+            "texto5 img5"
+            "img6 texto6"
+            "texto7 img7";
+        
+    }
+    
+    }
+}
+@media (min-width: 600px){
+    .grillaStory{
+        grid-template-areas:
+        "header main"
+        "pcp msn"
+        "acordeon acordeon"
+        "footer footer";
+    
+    }
+}
+@media (min-width: 900px){
+    .grillaStory{
+        grid-template-areas:
+        "header header header"
+        "pcp main msn"
+        "acordeon acordeon acordeon"
+        "footer footer footer ";
+    
+    }
+
+}

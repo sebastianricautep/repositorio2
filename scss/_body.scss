@@ -3,24 +3,34 @@
     margin: 0;
     padding: 0
 }
+@mixin grid ($margin, $padding, $gap){
+    margin: $margin;
+    padding: $padding;
+    gap: $gap;
+
+}
 body{
     background-color:whitesmoke;
     margin: 2em;
-    gap: 1em;
+    
     h1, h2, h3, h4, h5{
         text-align: center;
-        padding: 0.5em;
+        padding: 5px;
+        
         }
         p{
             color: black;
-            font-size: 18px;
-            padding: 2px;
-            margin: 2px;
+            background-color: whitesmoke;
+            font-size: 1.2em;
+            padding: 0.2rem;
+            margin: 5px;
+            border-radius: 4px;
             text-align: justify;
             &:hover{
-                transition: 1s;
-                color: rgb(109, 0, 0);
-                font-size: 22px;
+                background-color: rgb(58, 58, 58);
+                transition: 0.5s;
+                color: white;
+                font-size: 1.3em;
             }
         }
 
@@ -33,4 +43,99 @@ body{
     
     
 }
+.grilla1{
+    main{
+        @include grid(2px, 3px, 0px );
+        
+    }
+    .estadio{
+        @include grid(2px, 3px, 0px );
+        grid-area: estadio;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        align-content: center;
+        img{
+            margin-bottom: 20px;
+            margin-top: 20px;
+        }
+    }
+
+    .menu2{
+        grid-area: menu2;
+        @include grid(2px, 3px, 0px );
+
+    }
+    .contenido{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: first baseline;
+        grid-area: contenido;
+        @include grid(2px, 3px, 0px );
+    }
+    @include grid(20px, 2px, 15px );
+    display: grid;
+    grid-template-areas: 
+    "header"
+    "main"
+    "estadio"
+    "menu2"
+    "contenido"
+    "footer";
+    border:#000000 solid ;
+    
+    
+}
+@media (min-width: 600px){
+    
+    .grilla1{
+        grid-template-areas: 
+        "header main "
+        "menu2 menu2"
+        "estadio estadio"
+        "contenido contenido  "
+        "footer footer ";
+        .estadio{
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: center;
+            align-content: center;
+            img{
+                width: 230px;
+                margin-left: 20px;
+                margin-right: 20px;
+            }
+        }
+    }
+    
+    
+
+}
+@media (min-width: 1000px){
+    .grilla1{
+        grid-template-areas: 
+        "header header main"
+        "menu2  contenido contenido"
+        "estadio contenido contenido "
+        "footer footer footer";
+        grid-template-columns: 300px auto 500px;
+        grid-template-rows: 100px 200px  auto;
+        .estadio{
+            display: flex;
+            flex-direction: column-reverse;
+            align-items: center;
+            justify-content: space-evenly;
+            img{
+                width: 350px;
+                margin-left: 20px;
+                margin-right: 20px;
+            }
+        }
+}
+
+}
+
 
